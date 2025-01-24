@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Register</title>
+    <style>
+         input{
+            border-radius:20px;
+            border-color: bisque;
+            margin-top:10px;
+            margin-left:60px;
+
+        }
+    </style>
+</head>
+<body style="background-image: url(https://scontent.fgyd8-1.fna.fbcdn.net/v/t39.30808-6/264889586_2098501693633304_7821510218172786233_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=6_T93HVqbG4Q7kNvgGE0M7C&_nc_oc=AdjbCL-OfhVfkF-VfkW8s-uYIknt_9EZ3rDXBCw7FwrnOiSIHHkaNlyaDHs9wTHTWX4&_nc_zt=23&_nc_ht=scontent.fgyd8-1.fna&_nc_gid=AeQVI3dFuj8dequKXVeMp0k&oh=00_AYD7TOLtbLB0U_7wxihJtu_rAKN9pAl3aPPqzs9poZl8oA&oe=67664B99);
+background-size: cover;
+height: 100vh;">
+    <h3 style="text-align: center;
+    font-family:'Poppins',sans-serif;">Register</h3>
+    <form method="POST">
+    <div>
+            <div style=" width: 290px;
+            background-color:rgba(250, 235, 215,0.5);
+            height:150px;position:absolute;
+            left:45%;
+            top:40%;
+            border-radius: 30px;">
+                    <span style="position:relative;top:10px;left:45px;">{% if error %}
+                        {{ error }}
+                        {% endif %}</span>
+                <input type="text" style="margin-top: 30px;" name="username" required placeholder="İstifadəçi adı təyin edin">
+                <input type="password" style="display:block;" name="password" placeholder="şifrə təyin edin" required>
+                <button type="submit" style="margin-left: 120px;margin-top: 10px;">Register</button>
+                <p style="font-family: 'Poppins',sans-serif;position:relative;top:20px;left:20px;">Hesabınız yoxdur?<a href="{{ url_for('login') }}">Login</a></p>
+            </body>
+            </div>    
+    </div>
+</form>
+</html>
